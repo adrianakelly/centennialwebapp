@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>WebApp – Week 1</title>
+
+    <style>
+        .heading
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:xx-large;
+        }
+        .content
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .signature
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: slateblue;
+            color: white;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+
+    <script language="JavaScript">       
+        function LocalBasicCalculator()
+        {
+            var Num1 = document.getElementById("Number1");
+            var Num2 = document.getElementById("Number2");
+            var MathOp = document.getElementById("SelectedOperation");
+            var FResult;
+            if (MathOp.value == "+")
+            {
+                FResult = Number(Num1.value) + Number(Num2.value);
+            }
+            if (MathOp.value == "-")
+            {
+                FResult = Number(Num1.value) - Number(Num2.value);
+            }
+            if (MathOp.value == "*")
+            {
+                FResult = Number(Num1.value) * Number(Num2.value);
+            }
+            if (MathOp.value == "/")
+            {
+                if (Num2.value == 0)
+                {
+                    FResult = "Error: division by zero";
+                }
+                else
+                {
+                    FResult = Number(Num1.value) / Number(Num2.value);
+                }
+            }
+            alert(Num1.value + " " + MathOp.value + " " + Num2.value + " = " + FResult);
+            //import {LibBasicCalculator} from "Lib01.js";
+            //alert(LibBasicCalculator());
+        }
+    </script>
+
+</head>
+
+
+<body>
+    <div class="heading">Web Application Development – Week 1</div>
+    <div class="content">
+        <p>
+            Task 1: self-introduction video<br>
+            Task 2: install Tools: Visual Studio Code, Git, Node.js, MongoDB, and 3rd part npm pages<br>
+            Task 3: create and set up a GitHub account<br>
+            Task 4: push a practice project to the GitHub repository<br><br>
+        </p>
+    </div>
+
+    <form id="FormCalc" name="FormCalc">
+        <div class="heading">Practice Project 1  – Basic Calculator</div>
+        <div class="content">
+            <table>
+                <tr>
+                    <td width="200">
+                        Number 1:<br>
+                        <input type="text" id="Number1" nane="Number1"><br>
+                    </td>
+                    <td width="200">
+                        Operation (+, -, *, /):<br>
+                        <input type="text" id="SelectedOperation"><br>
+                    </td>
+                    <td width="200">
+                        Number 2:<br>
+                        <input type="text" id="Number2" name="Number2"><br>
+                    </td>
+                    <td width="200">
+                        <br>
+                        <button type="submit" id="localcalc" name="localcalc" onclick="JavaScript:LocalBasicCalculator()">Show result</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p>&nbsp;</p>
+        <div class="signature">
+            <large>
+                <b>Adriana Kelly</b><br>
+            </large>
+            <small>
+                Web Application Development<br>
+                Software Engineering – Artificial Intelligence<br>
+                Centennial College<br>
+                Student #: 301113409<br>
+                September 20, 2020<br>
+            </small>
+        </div>
+    </form>
+
+</body>
+
+</html>
